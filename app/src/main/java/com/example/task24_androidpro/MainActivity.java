@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +22,18 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        MainClass mainClass = new MainClass();
+        MainClass childClass1 = new ChildClass1();
+        MainClass childClass2 = new ChildClass2();
+        MainClass childClass3 = new ChildClass3();
+        ArrayList<MainClass> listClasses = new ArrayList<>();
+
+        listClasses.add(childClass1);
+        listClasses.add(childClass2);
+        listClasses.add(childClass3);
+
+        
+
     }
 }
