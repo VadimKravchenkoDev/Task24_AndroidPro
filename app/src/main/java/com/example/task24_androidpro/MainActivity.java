@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        MainClass mainClass = new MainClass();
+
         MainClass childClass1 = new ChildClass1();
         MainClass childClass2 = new ChildClass2();
         MainClass childClass3 = new ChildClass3();
@@ -34,10 +34,33 @@ public class MainActivity extends AppCompatActivity {
         listClasses.add(childClass2);
         listClasses.add(childClass3);
 
+
+
         for (int i=0; i<=listClasses.size(); i++){
             Log.d("zmei", String.valueOf(listClasses.get(i)));
         }
         Log.d ("zmei", String.valueOf(listClasses.size()));
+
+
+
+
+        ArrayList<MainClass> list = new ArrayList<>();
+
+        // Создаем объекты классов-потомков и добавляем их в ArrayList
+        list.add(new ChildClass1());
+        list.add(new ChildClass2());
+        list.add(new ChildClass3());
+        Log.i("vadik", "222 is working!");
+        // Перебираем все элементы в ArrayList и выводим в logcat название их классов
+        for (MainClass item : list) {
+            Log.d("vadik", "Class: " + item.getClass().getSimpleName());
+        }
+
+        // Выводим размер ArrayList
+        Log.d("vadik", "Size of ArrayList: " + list.size());
+
+
+
 
     }
 }
