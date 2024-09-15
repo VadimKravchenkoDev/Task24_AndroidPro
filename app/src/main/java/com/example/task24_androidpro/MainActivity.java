@@ -1,6 +1,7 @@
 package com.example.task24_androidpro;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +34,10 @@ public class MainActivity extends AppCompatActivity {
         listClasses.add(childClass2);
         listClasses.add(childClass3);
 
-        
+        for (int i=0; i<=listClasses.size(); i++){
+            Log.d("zmei", String.valueOf(listClasses.get(i)));
+        }
+        Log.d ("zmei", String.valueOf(listClasses.size()));
 
     }
 }
